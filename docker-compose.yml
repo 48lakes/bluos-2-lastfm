@@ -1,0 +1,18 @@
+services:
+  bluos-lastfm:
+    container_name: bluos-lastfm
+    image: bluos-lastfm:local
+    build: .
+    env_file: .env
+    restart: unless-stopped
+    networks:
+      - lan
+    volumes:
+      - bluos_lastfm_data:/data
+
+networks:
+  lan:
+    driver: bridge
+
+volumes:
+  bluos_lastfm_data: {}

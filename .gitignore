@@ -1,0 +1,40 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.eggs/
+*.log
+
+# --- Virtual environments ---
+.venv/
+env/
+venv/
+ENV/
+.Python
+
+# --- Docker ---
+# Don’t commit local volumes or build artifacts
+/data/
+*.pid
+*.seed
+
+# --- Config & secrets ---
+.env
+.env.*
+!sample.env          # keep the example env for documentation
+
+# --- OS / editor files ---
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# --- Project specific ---
+# Cache of scrobbles (don’t share personal listening history)
+scrobble_queue.json
+*.sqlite
